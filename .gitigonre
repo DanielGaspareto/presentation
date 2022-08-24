@@ -1,0 +1,8 @@
+Created by .ignore support plugin (hsz.mobi)
+.idea/
+__pycache__/
+config/__pycache__/
+secret_config.py
+utils/__pycache__/
+venv/
+workers/__pycache__/
