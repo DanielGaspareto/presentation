@@ -5,7 +5,7 @@ import requests
 from flask import render_template
 
 from app import app
-from app.utils import db_simulation
+from app.utils import config
 
 
 @app.route('/')
@@ -15,7 +15,7 @@ def index():
 
     :return: html text.
     """
-    user = db_simulation.info
+    user = config.info
     current_time = datetime.datetime.now()
     year = current_time.year
 
@@ -50,7 +50,7 @@ def example():
 
     :return: With render template.
     """
-    user = db_simulation.info
+    user = config.info
 
     name = user.get('name')
     return render_template('index.html', name=name)
